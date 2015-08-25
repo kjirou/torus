@@ -36,6 +36,8 @@ export TORUS_API_TOKEN=0000000000000000000000000000000000000000
 
 ### project command
 
+Get builds from single project.
+
 ```bash
 torus project USER_NAME PROJECT_NAME
 ```
@@ -43,7 +45,7 @@ torus project USER_NAME PROJECT_NAME
 ```
 --limit, -l
 
-  Build count, default is 30
+  Build count, default is 30, max is 100
 
 --offset, -o
 
