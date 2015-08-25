@@ -1,6 +1,6 @@
 {
   "name": "torus",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Operate CircleCI REST API by CLI",
   "main": "index.js",
   "bin": {
