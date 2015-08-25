@@ -1,0 +1,35 @@
+{
+  "name": "torus",
+  "version": "0.0.0",
+  "description": "Operate CircleCI REST API by CLI",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kjirou/torus.git"
+  },
+  "keywords": [
+    "circleci",
+    "ci",
+    "cli",
+    "shell"
+  ],
+  "author": "kjirou",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kjirou/torus/issues"
+  },
+  "homepage": "https://github.com/kjirou/torus#readme",
+  "dependencies": {
+    "chalk": "1.1.1",
+    "circleci": "0.2.0",
+    "lodash": "3.10.1",
+    "minimist": "1.2.0"
+  },
+  "devDependencies": {
+    "mocha": "2.2.5",
+    "rewire": "2.3.4"
+  }
+}
