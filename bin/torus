@@ -5,10 +5,12 @@ var execute = require('../index');
 execute(
   process.argv.slice(2),
   process.env.TORUS_CIRCLECI_API_TOKEN || null,
-  function(err) {
+  function(err, lines) {
     if (err) {
+      console.error(err);
       process.exit(1);
     } else {
+      console.log(lines.join('\n'));
       process.exit(0);
     }
   }

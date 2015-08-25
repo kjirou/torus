@@ -39,12 +39,13 @@ module.exports = function execute(args, apiTokenFromEnv, callback) {
   );
   commander
     .execute(commander.apiToken, args)
-    .then(function onFulfilled(lines) {
-      console.log(lines.join('\n'));
-      callback();
-    })
-    .catch(function onRejected(err) {
-      callback(err);
-    })
+    .then(
+      function onFulfilled(lines) {
+        callback(null, lines);
+      },
+      function onRejected(err) {
+        callback(err);
+      }
+    )
   ;
 };
