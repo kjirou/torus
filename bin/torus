@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+var execute = require('../index');
+
+execute(
+  process.argv.slice(2),
+  process.env.TORUS_CIRCLECI_API_TOKEN || null,
+  function(err) {
+    if (err) {
+      process.exit(1);
+    } else {
+      process.exit(0);
+    }
+  }
+);

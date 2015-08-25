@@ -8,14 +8,14 @@ var COMMANDS = {
 };
 
 
-function parseCommandAndToken(args, apiToken) {
+function parseCommandAndToken(args, apiTokenFromEnv) {
   var options = minimist(args, {
     alias: {
-      token: ['token', 't']
+      token: ['t']
     }
   });
 
-  var apiToken = options.token || apiToken;
+  var apiToken = options.token || apiTokenFromEnv;
   if (!apiToken) {
     throw new Error('API Token is required');
   }
@@ -32,14 +32,15 @@ function parseCommandAndToken(args, apiToken) {
   };
 }
 
-function execute(args, callback) {
+module.exports = function execute(args, apiTokenFromEnv, callback) {
   var commander = parseCommandAndToken(
     args,
-    process.env.TORUS_CIRCLECI_API_TOKEN || null
+    apiTokenFromEnv
   );
   commander
     .execute(commander.apiToken, args)
-    .then(function onFulfilled() {
+    .then(function onFulfilled(lines) {
+      console.log(lines.join('\n'));
       callback();
     })
     .catch(function onRejected(err) {
