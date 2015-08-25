@@ -34,9 +34,9 @@ Or
 export TORUS_API_TOKEN=0000000000000000000000000000000000000000
 ```
 
-### project command
+### "project" command
 
-Get builds from single project.
+Get recently builds from single project.
 
 ```bash
 torus project USER_NAME PROJECT_NAME
@@ -63,18 +63,18 @@ torus project USER_NAME PROJECT_NAME
 
 ```
 torus -t 0000000000000000000000000000000000000000 project kjirou my-repo-name -l 10
-success 2015-08-25T09:44:09.747Z https://circleci.com/gh/kjirou/my-repo-name/87 42
-success 2015-08-25T09:12:46.239Z https://circleci.com/gh/kjirou/my-repo-name/86 40
-success 2015-08-25T05:02:48.911Z https://circleci.com/gh/kjirou/my-repo-name/85 41
-success 2015-08-24T19:28:23.703Z https://circleci.com/gh/kjirou/my-repo-name/84 62
-success 2015-08-24T19:27:04.981Z https://circleci.com/gh/kjirou/my-repo-name/83 38
-success 2015-08-24T19:16:23.453Z https://circleci.com/gh/kjirou/my-repo-name/82 61
-success 2015-08-24T19:13:35.785Z https://circleci.com/gh/kjirou/my-repo-name/81 132
-success 2015-08-24T19:06:05.692Z https://circleci.com/gh/kjirou/my-repo-name/80 42
-success 2015-08-24T19:02:19.946Z https://circleci.com/gh/kjirou/my-repo-name/79 40
-success 2015-08-24T18:57:48.235Z https://circleci.com/gh/kjirou/my-repo-name/78 56
+success 2015-08-25T09:44:09.747Z https://circleci.com/gh/kjirou/my-repo-name/87 master 42
+success 2015-08-25T09:12:46.239Z https://circleci.com/gh/kjirou/my-repo-name/86 master 40
+success 2015-08-25T05:02:48.911Z https://circleci.com/gh/kjirou/my-repo-name/85 master 41
+success 2015-08-24T19:28:23.703Z https://circleci.com/gh/kjirou/my-repo-name/84 master 62
+success 2015-08-24T19:27:04.981Z https://circleci.com/gh/kjirou/my-repo-name/83 add-foo 38
+success 2015-08-24T19:16:23.453Z https://circleci.com/gh/kjirou/my-repo-name/82 add-foo 61
+success 2015-08-24T19:13:35.785Z https://circleci.com/gh/kjirou/my-repo-name/81 master 132
+success 2015-08-24T19:06:05.692Z https://circleci.com/gh/kjirou/my-repo-name/80 master 42
+success 2015-08-24T19:02:19.946Z https://circleci.com/gh/kjirou/my-repo-name/79 master 40
+success 2015-08-24T18:57:48.235Z https://circleci.com/gh/kjirou/my-repo-name/78 master 56
 
-[status] [start_time] [build_url] [execution_time_by_seconds]
+[status] [start_time] [build_url] [branch] [execution_time_by_seconds]
 ```
 
 ### Get "Failed" builds only
