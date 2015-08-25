@@ -18,7 +18,7 @@ npm install -g torus
 
 ### Set API Token
 
-At first, you should [get API Token from account dashboard](https://circleci.com/account/api).
+At first, you should get [API Token from account dashboard](https://circleci.com/account/api).
 
 Then set this token by:
 
