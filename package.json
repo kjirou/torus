@@ -3,6 +3,9 @@
   "version": "0.0.2",
   "description": "Operate CircleCI REST API by CLI",
   "main": "index.js",
+  "bin": {
+    "torus": "./bin/torus"
+  },
   "scripts": {
     "test": "mocha"
   },
